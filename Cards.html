@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.5s;
+      background-color: orange; 
+    }
+
+    header {
+      background-color: blueviolet;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .gallery img, .gallery video {
+      width: 300px; 
+      height: 300px; 
+      object-fit: contain;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .gallery img:hover, .gallery video:hover {
+      transform: scale(1.1);
+      animation: none; 
+      width: 300px;
+      
+    }
+
+    footer {
+      background-color: #333;
+      color: yellow;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><u><i>Animation Gallery:</i></u></h1>
+  </header>
+  
+  <div class="gallery">
+    
+    
+    <video controls>
+      <source src="illusion.mp4" type="video/mp4"> 
+      Your browser does not support the video tag.
+    </video>
+      <video controls>
+        <source src="animation.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+      </video>
+  
+         
+    <img src="thisimage.png" alt="3D pic3">
+    <img src="newimage.png" alt="3D pic4">
+    
+    <img src="Hospi.png" alt<="pic1">
+  </div>
+
+  <footer>
+    &copy; 2024 Cards
+  </footer>
+
+</body>
+</html>

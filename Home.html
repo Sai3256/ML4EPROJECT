@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.5s;
+    }
+
+    header {
+      background-color: #333;
+      color: yellow;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #555;
+      padding: 10px;
+    }
+
+    nav button {
+      cursor: pointer;
+      padding: 5px 10px;
+      color: blue;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .testimonial-section {
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 20px;
+      overflow-y: auto;
+      max-height: 150px;
+      border-radius: 8px;
+      opacity: 0;
+      animation: rotateAndFade 4s ease-in-out forwards;
+    }
+
+    @keyframes rotateAndFade {
+      0% {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+      25% {
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(270deg);
+      }
+      100% {
+        transform: rotate(360deg);
+        opacity: 1;
+      }
+    }
+
+    .testimonial {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #333;
+      color: yellow;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body bgcolor="orange">
+
+  <header>
+    <h1>MY Gallery</h1>
+  </header>
+
+
+  <div class="gallery">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX7-wh94Gk5vDq413MqcgcwOIYBfa23Yw-ag&usqp=CAU" height="200" width="100" alt="webwiz pic1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYd0Oav0Kv-S7E4Kk6E7KKc9yez3xcKsI1uQ&usqp=CAU" alt="webwiz pic2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj51oBLMTIbcgeek8r7O8wA0yISm2sQoh3NA&usqp=CAU" alt="webwiz pic 3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRX81O5hkfp6tZi0cHvdE13WOLOo_QeoLGfw&usqp=CAU" alt="webwiz pic 4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwB_XkNsnFji_ZgRBwo67JN106czUWDwxQ4Q&usqp=CAU" alt="webwiz pic 5">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYbOLpk8nv_jN9NwOsPBQuK7lmUT1E_SnhEQ&usqp=CAU" alt="webwiz pic 6">
+  </div>
+
+  <div class="testimonial-section">
+    <div class="testimonial">"HEY GUYS PRESENTING YOU A WEBSITE OF AN ART GALLERY WITH SIX DIFFERENT IMAGES"</div>
+    <div class="testimonial">"Integer nec sapien nec ligula luctus commodo. Sed aliquam sapien eu elit posuere, nec feugiat sem efficitur."</div>
+    <div class="testimonial">"Aenean hendrerit nulla vel risus facilisis, vitae vestibulum arcu ultricies. In ac metus non elit scelerisque fermentum."</div>
+    <!-- Add more testimonials as needed -->
+  </div>
+
+  <footer>
+    &copy; 2024 Image Gallery
+  </footer>
+
+</body>
+</html>
