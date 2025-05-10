@@ -15,6 +15,6 @@ Each section opens in a new tab to provide an uninterrupted browsing experience.
 
 ## 📞 Contact Information
 
-Feel free to reach out to me through my contact details provided on the home page.
+Feel free to reach out to me through my email:saikoushik.relangi@gmail.com or contact number:+91 7013734029
 
 
