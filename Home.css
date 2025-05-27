@@ -1,0 +1,97 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.5s;
+    }
+
+    header {
+      background-color: #333;
+      color: yellow;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #555;
+      padding: 10px;
+    }
+
+    nav button {
+      cursor: pointer;
+      padding: 5px 10px;
+      color: blue;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .testimonial-section {
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 20px;
+      overflow-y: auto;
+      max-height: 150px;
+      border-radius: 8px;
+      opacity: 0;
+      animation: rotateAndFade 4s ease-in-out forwards;
+    }
+
+    @keyframes rotateAndFade {
+      0% {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+      25% {
+        transform: rotate(90deg);
+      }
+      50% {
+        transform: rotate(180deg);
+      }
+      75% {
+        transform: rotate(270deg);
+      }
+      100% {
+        transform: rotate(360deg);
+        opacity: 1;
+      }
+    }
+
+    .testimonial {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #333;
+      color: yellow;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
