@@ -1,0 +1,20 @@
+
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcVDRq87yRTjTnqV2gyNV_CITHXHjTRHAtbw&usqp=CAU');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h1{
+            color: whitesmoke;
+        }
+        table{
+            color: yellow;
+        }
+        td{
+            text-align: center;
+        }
+        u{
+            padding: 1px;
+        }
+    
