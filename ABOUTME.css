@@ -1,19 +1,75 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2yb8a4FgEQcmdgZkcnCt9wpRXJ2TdVdMMTQ&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
-        body{
-            font-family: Montserrat;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2yb8a4FgEQcmdgZkcnCt9wpRXJ2TdVdMMTQ&usqp=CAU");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        p{
-         color: yellow;
-        }
-        h1{
-            color:white;
-        }
-       img {
-       border: none;
-       border-radius: 0;
-       }
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darken background */
+    z-index: -1;
+}
 
-  
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Image Styling */
+img {
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Layout Adjustments */
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table td {
+    vertical-align: top;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
