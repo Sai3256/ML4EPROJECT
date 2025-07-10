@@ -7,6 +7,10 @@ body {
     position: relative;
 }
 
+title{
+    color: #39FF14;
+}
+
 body::after {
     content: "";
     position: absolute;
