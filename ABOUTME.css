@@ -11,4 +11,9 @@
         h1{
             color:white;
         }
+       img {
+       border: none;
+       border-radius: 0;
+       }
+
   
