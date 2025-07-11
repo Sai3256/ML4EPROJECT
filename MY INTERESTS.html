@@ -5,48 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY INTERESTS</title>
     <style>
-        body{
-            background-image: url("https://jessicaroots.com/wp-content/uploads/2018/03/portfolio-background-header.jpg");
-            
+        body {
+            background: linear-gradient(to right, rgba(36, 86, 138, 0.7), rgba(88, 151, 196, 0.7)), url("https://jessicaroots.com/wp-content/uploads/2018/03/portfolio-background-header.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
         }
-        .image{
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 50px;
+            font-family: 'Segoe UI', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gap {
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-margin-top: 30px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
         }
-        .gap{
-           
-            padding:25px 250px 20px 250px;
-            color:rgb(67, 1, 1);
+
+        .textContent {
+            background-color: rgba(0, 0, 255, 0.4);
+            padding: 25px;
+            margin: 15px 0;
+            width: 70%;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .textContent{
-          background-color:  rgba(0, 0, 255, 0.056) ;
-            font-size: 17px;
-            margin-top: 8px;
-            display:inline-block;
-            
+
+        .textContent:hover {
+            background-color: rgba(0, 0, 255, 0.6);
+            transform: scale(1.05);
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .image img {
+            height: 250px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .image img:hover {
+            transform: scale(1.1);
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 768px) {
+            .textContent {
+                width: 90%;
+            }
+
+            .image img {
+                width: 220px;
+                height: 200px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1 align="center">HOBBIES AND INTERESTS</h1>
+    <h1>HOBBIES AND INTERESTS</h1>
     <div class="gap">
-      
-              <div class="textContent">MY HOBBIES INCLUDE READING NEWSPAPER, SOLVING PUZZLES, PLAYING CHESS ETC.</div>
-              <div class="textContent">MY INTEREST IS FOR COMPETITIVE PROGRAMMING, WEB DEVELOPMENT, MACHINE LEARNING AND I AM VERY MUCH KEEN IN PROBLEM SOLVING.</div>
-            <div class="textContent">APART FROM  MY TECH INTERESTS I AM ALSO PASSIONATE ABOUT ASTROPHOTOGRAPHY CAPTURING DIFFERENT CELESTIAL BODIES PICTURES.</div>
-        <div class="textContent">I AM ALSO INTERESTED IN GAME DEVELOPMENT AND EXPLORING NEW VERSIONS OF GAMES, AS GAMES ARE THE MOST SIGNIFICANT WAY TO RELAX.</div>
-    <div class="textContent">I AM ALSO KEEN IN DRAWING AND MAKING DIFFERENT ARTS AND MY HOBBIES ALSO INCLUDES SWIMMING AND GOING TO GYM.</div>
-<div class="textContent">I AM VERY MUCH PASSIONATE TO CONTRIBUTE MY KNOWLEDGE REGARDING SPACE AND I AM TRYING TO SORT OUT MANY PROBLEMS IN THE FIELD OF SPACE AND TECHNOLOGY.</div>
-<div class="textContent">APART FROM ALL THE NON TECH HOBBIES, MY TECH HOBBIES INCLUDES GIVING CONTESTS AND QUIZS REGARDING VARIOUS ASPECTS IN PRESENT DAY SOCIETY.</div>
+        <div class="textContent">
+            <span class="icon">&#x1F4D6;</span> MY HOBBIES INCLUDE READING NEWSPAPER, SOLVING PUZZLES, PLAYING CHESS ETC.
         </div>
-        
-        <div class="image"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6bDgPpUCVa8FvIA8FxYNktxH51oOH7K2GRw&usqp=CAU" height="250" width="320">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpyVtc4IEA7xPVKWYsg7HHrP396NCWHFYBzQ&usqp=CAU" height="250" width="320">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuk_URNp-FndTFHDa1Siv66G-uEOy6BjGYfQ&usqp=CAU" height="250" width="320">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcV48Qde_WeBIiTX32Kt4dFOM-jaq1l30y2N383sFyO9CoZA08dNf8cui3w&s" height="250" width="300"></div>
+        <div class="textContent">
+            <span class="icon">&#x1F4BB;</span> MY INTEREST IS FOR COMPETITIVE PROGRAMMING, WEB DEVELOPMENT, MACHINE LEARNING AND I AM VERY MUCH KEEN IN PROBLEM SOLVING.
+        </div>
+        <div class="textContent">
+            <span class="icon">&#x1F30D;</span> APART FROM MY TECH INTERESTS, I AM ALSO PASSIONATE ABOUT ASTROPHOTOGRAPHY CAPTURING DIFFERENT CELESTIAL BODIES PICTURES.
+        </div>
+        <div class="textContent">
+            <span class="icon">&#x1F3AE;</span> I AM ALSO INTERESTED IN GAME DEVELOPMENT AND EXPLORING NEW VERSIONS OF GAMES, AS GAMES ARE THE MOST SIGNIFICANT WAY TO RELAX.
+        </div>
+        <div class="textContent">
+            <span class="icon">&#x1F3B2;</span> I AM ALSO KEEN IN DRAWING AND MAKING DIFFERENT ARTS AND MY HOBBIES ALSO INCLUDES SWIMMING AND GOING TO GYM.
+        </div>
+        <div class="textContent">
+            <span class="icon">&#x1F680;</span> I AM VERY MUCH PASSIONATE TO CONTRIBUTE MY KNOWLEDGE REGARDING SPACE AND I AM TRYING TO SORT OUT MANY PROBLEMS IN THE FIELD OF SPACE AND TECHNOLOGY.
+        </div>
+        <div class="textContent">
+            <span class="icon">&#x1F4D2;</span> APART FROM ALL THE NON TECH HOBBIES, MY TECH HOBBIES INCLUDE GIVING CONTESTS AND QUIZZES REGARDING VARIOUS ASPECTS IN PRESENT DAY SOCIETY.
+        </div>
+    </div>
+
+    <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6bDgPpUCVa8FvIA8FxYNktxH51oOH7K2GRw&usqp=CAU" alt="Rubik's Cube">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpyVtc4IEA7xPVKWYsg7HHrP396NCWHFYBzQ&usqp=CAU" alt="Chess">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuk_URNp-FndTFHDa1Siv66G-uEOy6BjGYfQ&usqp=CAU" alt="Swimming">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShcV48Qde_WeBIiTX32Kt4dFOM-jaq1l30y2N383sFyO9CoZA08dNf8cui3w&s" alt="Astrophotography">
+    </div>
 </body>
 </html>
