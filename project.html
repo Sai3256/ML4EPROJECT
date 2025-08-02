@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrolling Project Cards</title>
+  <link rel="icon" href="project.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      gap: 30px;
+      animation: scroll-right 15s linear infinite;
+    }
+
+    @keyframes scroll-right {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .project-card {
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 30px;
+      width: 340px;
+      color: #fff;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .project-description {
+      font-size: 15px;
+      color: #d4d4d4;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .tools-used {
+      font-size: 14px;
+      color: #a3c5ff;
+      margin-bottom: 20px;
+    }
+
+    .view-btn {
+      background: transparent;
+      border: 2px solid #00bfff;
+      color: #00bfff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .view-btn:hover {
+      background: #00bfff;
+      color: #fff;
+      box-shadow: 0 0 20px #00bfff;
+    }
+
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple-effect 0.6s linear;
+      background: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+    }
+
+    @keyframes ripple-effect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="project-card">
+      <div class="project-title">AI Chatbot</div>
+      <div class="project-description">
+        A smart AI chatbot with built-in authentication. Easily toggle between light and dark modes while enjoying smooth, real-time conversations — all in a clean, responsive UI.
+      </div>
+      <div class="tools-used"><strong>Tools:</strong> HTML, CSS, JavaScript, Gemini API</div>
+      <button class="view-btn" onclick="rippleEffect(event, 'https://sai3256.github.io/AI-CHATBOT/')">View Project</button>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Elite Sports Shop</div>
+      <div class="project-description">
+        A fully responsive sports product website with live search, Firebase integration, and a modern UI for customers to explore sports gear.
+      </div>
+      <div class="tools-used"><strong>Tools:</strong> HTML, CSS, JavaScript, Firebase, Firestore</div>
+      <button class="view-btn" onclick="rippleEffect(event, 'https://sai3256.github.io/GTA-TASK/GTATASK.html')">View Project</button>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Booking Jini</div>
+      <div class="project-description">
+        An AI-driven hotel booking platform where hotels can generate posts, create exclusive occasion-based offers, and users can select add-ons like food, pool etc while booking. Hotels are sorted by price.
+      </div>
+      <div class="tools-used"><strong>Tools:</strong> HTML, CSS, JavaScript, Stabilty API, GROQ LLaMa</div>
+      <button class="view-btn" onclick="rippleEffect(event, 'https://your-link3.com')">View Project</button>
+    </div>
+  </div>
+
+  <script>
+    function rippleEffect(e, link) {
+      const button = e.currentTarget;
+      const circle = document.createElement("span");
+      const diameter = Math.max(button.clientWidth, button.clientHeight);
+      const rect = button.getBoundingClientRect();
+
+      circle.classList.add("ripple");
+      circle.style.width = circle.style.height = `${diameter}px`;
+      circle.style.left = `${e.clientX - rect.left - diameter / 2}px`;
+      circle.style.top = `${e.clientY - rect.top - diameter / 2}px`;
+
+      button.appendChild(circle);
+
+      setTimeout(() => {
+        circle.remove();
+        window.open(link, "_blank");
+      }, 700);
+    }
+  </script>
+
+</body>
+</html>
